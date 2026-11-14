@@ -7,3 +7,16 @@
 export function verifyLoafIntegrity(node: LoafNode): boolean {
   return node.pawsTucked && node.tailCurled;
 }
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.2.5
+ * Commit: refactor(rtos): harden treat dispenser task watchdog against yarn interference
+ * Timestamp: 2026-11-14T20:56:44.310Z
+ */
+// RTOS Treat Dispenser Watchdog
+void vTreatWatchdog(void) {
+  if (yarn_obstruction_detected()) {
+    reverse_dispenser_auger();
+  }
+}
