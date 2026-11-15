@@ -1975,3 +1975,13 @@ const _fastPurrPool = new Float32Array(PURR_BUFFER_SZ);
 export function verifyLoafIntegrity(node: LoafNode): boolean {
   return node.pawsTucked && node.tailCurled;
 }
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.2.5
+ * Commit: feat(kinematics): add raycasted pounce trajectory prediction with sisal friction damping
+ * Timestamp: 2026-11-15T22:31:58.319Z
+ */
+// Pounce kinematics: Sisal damping integration
+const FRICTION_SISAL = 0.94;
+const pounceForce = (distance: number) => Math.min(distance * 1.82, 4.5) * FRICTION_SISAL;
