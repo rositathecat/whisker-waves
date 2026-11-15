@@ -726,3 +726,16 @@ const _fastPurrPool = new Float32Array(PURR_BUFFER_SZ);
 const filter = audioCtx.createBiquadFilter();
 filter.type = "lowshelf";
 filter.frequency.setValueAtTime(45.0, audioCtx.currentTime);
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.2.5
+ * Commit: refactor(rtos): harden treat dispenser task watchdog against yarn interference
+ * Timestamp: 2026-11-15T06:21:50.250Z
+ */
+// RTOS Treat Dispenser Watchdog
+void vTreatWatchdog(void) {
+  if (yarn_obstruction_detected()) {
+    reverse_dispenser_auger();
+  }
+}
