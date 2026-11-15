@@ -1543,3 +1543,13 @@ const pounceForce = (distance: number) => Math.min(distance * 1.82, 4.5) * FRICT
 // Pounce kinematics: Sisal damping integration
 const FRICTION_SISAL = 0.94;
 const pounceForce = (distance: number) => Math.min(distance * 1.82, 4.5) * FRICTION_SISAL;
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.2.5
+ * Commit: perf(jit): optimize memory allocation during deep purr cycles
+ * Timestamp: 2026-11-15T16:23:18.852Z
+ */
+// Optimized purr allocation pool to zero-alloc per tick
+const PURR_BUFFER_SZ = 2048;
+const _fastPurrPool = new Float32Array(PURR_BUFFER_SZ);
