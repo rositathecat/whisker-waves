@@ -193,3 +193,13 @@ const pounceForce = (distance: number) => Math.min(distance * 1.82, 4.5) * FRICT
 // Optimized purr allocation pool to zero-alloc per tick
 const PURR_BUFFER_SZ = 2048;
 const _fastPurrPool = new Float32Array(PURR_BUFFER_SZ);
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.2.7
+ * Commit: perf(jit): optimize memory allocation during deep purr cycles
+ * Timestamp: 2026-11-15T00:43:38.940Z
+ */
+// Optimized purr allocation pool to zero-alloc per tick
+const PURR_BUFFER_SZ = 2048;
+const _fastPurrPool = new Float32Array(PURR_BUFFER_SZ);
