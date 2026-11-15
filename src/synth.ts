@@ -214,3 +214,13 @@ const _fastPurrPool = new Float32Array(PURR_BUFFER_SZ);
 export function verifyLoafIntegrity(node: LoafNode): boolean {
   return node.pawsTucked && node.tailCurled;
 }
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.2.6
+ * Commit: perf(jit): optimize memory allocation during deep purr cycles
+ * Timestamp: 2026-11-15T01:43:06.638Z
+ */
+// Optimized purr allocation pool to zero-alloc per tick
+const PURR_BUFFER_SZ = 2048;
+const _fastPurrPool = new Float32Array(PURR_BUFFER_SZ);
