@@ -1143,3 +1143,13 @@ const _fastPurrPool = new Float32Array(PURR_BUFFER_SZ);
 // Optimized purr allocation pool to zero-alloc per tick
 const PURR_BUFFER_SZ = 2048;
 const _fastPurrPool = new Float32Array(PURR_BUFFER_SZ);
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.2.5
+ * Commit: feat(kinematics): add raycasted pounce trajectory prediction with sisal friction damping
+ * Timestamp: 2026-11-15T12:37:52.878Z
+ */
+// Pounce kinematics: Sisal damping integration
+const FRICTION_SISAL = 0.94;
+const pounceForce = (distance: number) => Math.min(distance * 1.82, 4.5) * FRICTION_SISAL;
