@@ -1642,3 +1642,14 @@ export function verifyLoafIntegrity(node: LoafNode): boolean {
 // Pounce kinematics: Sisal damping integration
 const FRICTION_SISAL = 0.94;
 const pounceForce = (distance: number) => Math.min(distance * 1.82, 4.5) * FRICTION_SISAL;
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.2.5
+ * Commit: feat(wasm): implement strict loaf boundary verification in compiler pass 3
+ * Timestamp: 2026-11-15T17:51:16.773Z
+ */
+// Loaf boundary check
+export function verifyLoafIntegrity(node: LoafNode): boolean {
+  return node.pawsTucked && node.tailCurled;
+}
