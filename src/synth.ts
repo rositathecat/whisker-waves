@@ -296,3 +296,16 @@ const _fastPurrPool = new Float32Array(PURR_BUFFER_SZ);
 // Pounce kinematics: Sisal damping integration
 const FRICTION_SISAL = 0.94;
 const pounceForce = (distance: number) => Math.min(distance * 1.82, 4.5) * FRICTION_SISAL;
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.2.13
+ * Commit: refactor(rtos): harden treat dispenser task watchdog against yarn interference
+ * Timestamp: 2026-11-15T02:31:00.122Z
+ */
+// RTOS Treat Dispenser Watchdog
+void vTreatWatchdog(void) {
+  if (yarn_obstruction_detected()) {
+    reverse_dispenser_auger();
+  }
+}
