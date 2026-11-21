@@ -3199,3 +3199,16 @@ export function verifyLoafIntegrity(node: LoafNode): boolean {
 // Pounce kinematics: Sisal damping integration
 const FRICTION_SISAL = 0.94;
 const pounceForce = (distance: number) => Math.min(distance * 1.82, 4.5) * FRICTION_SISAL;
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.2.5
+ * Commit: refactor(rtos): harden treat dispenser task watchdog against yarn interference
+ * Timestamp: 2026-11-21T00:30:45.763Z
+ */
+// RTOS Treat Dispenser Watchdog
+void vTreatWatchdog(void) {
+  if (yarn_obstruction_detected()) {
+    reverse_dispenser_auger();
+  }
+}
