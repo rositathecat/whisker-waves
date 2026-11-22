@@ -3345,3 +3345,14 @@ void vTreatWatchdog(void) {
     reverse_dispenser_auger();
   }
 }
+
+
+/**
+ * Rosita Hacker Cat - Periodic Upgrade v1.2.5
+ * Commit: feat(wasm): implement strict loaf boundary verification in compiler pass 3
+ * Timestamp: 2026-11-22T02:30:45.428Z
+ */
+// Loaf boundary check
+export function verifyLoafIntegrity(node: LoafNode): boolean {
+  return node.pawsTucked && node.tailCurled;
+}
